@@ -40,8 +40,13 @@ class _TabsScreenState extends State<TabsScreen> {
         onTap: _selectPage,
         items: const [
           BottomNavigationBarItem(
-              icon: Icon(Icons.category), label: 'Categories'),
-          BottomNavigationBarItem(icon: Icon(Icons.star), label: 'Favorites'),
+            icon: Icon(Icons.category),
+            label: 'Categories',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.star),
+            label: 'Favorites',
+          ),
         ],
       ),
     );

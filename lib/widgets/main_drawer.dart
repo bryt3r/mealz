@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:meals_app/screens/filters_screen.dart';
 
 class MainDrawer extends StatelessWidget {
@@ -13,7 +12,7 @@ class MainDrawer extends StatelessWidget {
             ),
             title:  Text(
               title,
-              style: TextStyle(
+              style: const TextStyle(
                   fontFamily: 'RobotoCondensed',
                   fontSize: 24,
                   fontWeight: FontWeight.bold),
@@ -48,12 +47,12 @@ class MainDrawer extends StatelessWidget {
           buildListTile('Meals',
            Icons.restaurant,
           () {
-            Navigator.of(context).pushNamed('/');
+            Navigator.of(context).pushReplacementNamed('/');
           }),
           buildListTile('Filters',
            Icons.settings, 
            () {
-             Navigator.of(context).pushNamed(FiltersScreen.routeName);
+             Navigator.of(context).pushReplacementNamed(FiltersScreen.routeName);
            })
         ],
       ),
