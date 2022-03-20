@@ -12,6 +12,11 @@ class FiltersScreen extends StatefulWidget {
 }
 
 class _FiltersScreenState extends State<FiltersScreen> {
+  var _glutenFree = false;
+  var _vegetarian = false;
+  var _vegan = false;
+  var _lactoseFree = false;
+
   @override
   void initState() {
     _glutenFree = widget.currentFilters['gluten'] as bool;
@@ -20,11 +25,6 @@ class _FiltersScreenState extends State<FiltersScreen> {
     _vegan = widget.currentFilters['vegan'] as bool;
     super.initState();
   }
-
-  var _glutenFree = false;
-  var _vegetarian = false;
-  var _vegan = false;
-  var _lactoseFree = false;
 
   Widget _buildSwitchListTile(
       String title, String description, bool currentValue, updateValue) {
@@ -38,9 +38,9 @@ class _FiltersScreenState extends State<FiltersScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: MainDrawer(),
+      drawer: const MainDrawer(),
       appBar: AppBar(
-        title: Text('Your Filters'),
+        title: const Text('Your Filters'),
         actions: [
           IconButton(
               onPressed: () {
@@ -57,7 +57,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
       body: Column(
         children: [
           Container(
-            padding: EdgeInsets.all(20),
+            padding: const EdgeInsets.all(20),
             child: Text(
               'Adjust Your Meal Selection',
               style: Theme.of(context).textTheme.headline6,
